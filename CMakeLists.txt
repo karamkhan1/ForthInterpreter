@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(ForthInterpreter)
+set(CMAKE_C_STANDARD 99)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+add_executable(ForthInterpreter parser.c stack.c)
