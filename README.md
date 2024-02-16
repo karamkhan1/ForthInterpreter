@@ -22,7 +22,16 @@ Here is a list of commands supported by the interpreter:
 - `-`: Subtract the top two elements.
 - `*`: Multiply the top two elements.
 - `/`: Divide the top two elements.
-- `DUP`: Duplicate the top element.
-- `.S`: Print the current stack.
+- `DUP`: Duplicate the top element of the stack.
+- `DROP`: Remove the top element of the stack.
+- `SWAP`: Swap the top two elements of the stack.
+- `OVER`: Duplicate the second element to the top of the stack.
+- `ROT`: Rotate the third element to the top of the stack.
+- `2DUP`: Duplicate the top two elements of the stack.
+- `2DROP`: Remove the top two elements of the stack.
+- `2SWAP`: Swap the top two pairs of elements of the stack.
+- `2OVER`: Copy the second pair of elements to the top of the stack.
+- `.`: Print the top element of the stack.
+- `.S`: Print the entire stack with the top element indicated.
 
 For more commands and detailed usage, email me at kkhan6@luc.edu.
