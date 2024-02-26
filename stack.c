@@ -117,6 +117,30 @@ void divide() {
     } else printf("Error: Not enough elements for division\n");
 }
 
+void div_mod() {
+    if (sp >= 2) {
+        int divisor = pop();
+        if (divisor != 0) {
+            int dividend = pop();
+            int quotient = dividend / divisor;
+            int remainder = dividend % divisor;
+            push(remainder);
+            push(quotient);
+        } else printf("Error: Division by zero\n");
+    } else printf("Error: Not enough elements for /MOD\n");
+}
+
+void mod() {
+    if (sp >= 2) {
+        int divisor = pop();
+        if (divisor != 0) {
+            int dividend = pop();
+            int remainder = dividend % divisor;
+            push(remainder);
+        } else printf("Error: Division by zero\n");
+    } else printf("Error: Not enough elements for MOD\n");
+}
+
 // Print functions for debugging.
 void dot() {
     if (!is_empty()) printf("%d\n", stack[sp - 1]);

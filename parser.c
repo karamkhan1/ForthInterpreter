@@ -21,6 +21,8 @@ void two_dup(void);
 void two_over(void);
 void two_drop(void);
 void print_stack(void);
+void div_mod(void);
+void mod(void);
 
 // Checks if a string represents a number.
 int is_number(const char *str) {
@@ -46,9 +48,12 @@ void execute_command(const char *command) {
     else if (strcmp(command, "2DUP") == 0) two_dup();
     else if (strcmp(command, "2OVER") == 0) two_over();
     else if (strcmp(command, "2DROP") == 0) two_drop();
+    else if (strcmp(command, "/MOD") == 0) div_mod();
+    else if (strcmp(command, "MOD") == 0) mod();
     else if (strcmp(command, ".S") == 0) print_stack();
     else if (is_number(command)) push(atoi(command));
     else printf("Unknown command: %s\n", command);
+    if (strcmp(command, ".S") != 0 && !is_number(command)) dot();
 }
 
 // Main function to drive the interpreter loop.
