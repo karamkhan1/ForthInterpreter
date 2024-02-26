@@ -22,6 +22,8 @@ Here is a list of commands supported by the interpreter:
 - `-`: Subtract the top two elements.
 - `*`: Multiply the top two elements.
 - `/`: Divide the top two elements.
+- `/MOD`: Divide the top two elements, pushing the remainder and then the quotient onto the stack.
+- `MOD`: Divide the top two elements, pushing only the remainder onto the stack.
 - `DUP`: Duplicate the top element of the stack.
 - `DROP`: Remove the top element of the stack.
 - `SWAP`: Swap the top two elements of the stack.
